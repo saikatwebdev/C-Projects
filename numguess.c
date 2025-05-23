@@ -5,19 +5,23 @@
 int main(){
     srand(time(0));
     int randomNumber = (rand() % 100) +1;
-    int yourNum;
-    printf("Guess the correct Number to Win: ");
-    scanf("%d",&yourNum);
-    if(yourNum == randomNumber){
-        printf("Computer choose %d\n",randomNumber);
-        printf("You choose %d\n",yourNum);
-        printf("Congrats!!You won the battle!!!");
-    }
-    else {
-        printf("Computer choose %d\n",randomNumber);
-        printf("You choose %d\n",yourNum);
-        printf("Computer won :) you loose the game !!!");
-    }
+    int no_of_guesses = 0;
+    int guessed;
+
+    do{
+        printf("Guess the Number: ");
+        scanf("%d", &guessed);
+        if(guessed>randomNumber){
+            printf("Lower number please!\n");
+        }
+        else if(guessed<randomNumber){
+            printf("Higher number please!\n");
+        }
+        else printf("Congratulations :) \n");
+        no_of_guesses++;
+    }while(randomNumber != guessed);
+    printf("You won the guess battle in %d guesses", no_of_guesses);
+    
 
     return 0 ;
 }
