@@ -23,3 +23,8 @@ int main() {
     printf("%d %d %d\n", nl, nw, nc);
     return 0;
 }
+
+/*
+Every time the user inputs any kind of character or spaces or tabs or enter it counts ....
+and when the user click CTRL + z + ENTER the operation ends with printing the number of lines spaces and the words..
+*/
