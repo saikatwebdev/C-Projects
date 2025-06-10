@@ -1,4 +1,5 @@
 #include<stdio.h>
+int newFile();
 
 int main(){
     FILE *file;
@@ -10,6 +11,8 @@ int main(){
     fprintf(file, "Hello, World!");
     fprintf(file, "\nThis is a test file.");
     fprintf(file, "\nWriting to a file in C is easy.");
+
+    newFile();
     fclose(file);
     return 0;
 }
